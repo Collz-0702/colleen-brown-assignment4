@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1668706474355' stop='1668706479224'>
+    <name>Add to Shopping Cart</name>
+    <title>Add to Shopping Cart</title>
+    <test-cases>
+        <test-case start='1668706474355' status='broken' stop='1668706479224'>
+            <name>should add an item to shopping cart</name>
+            <title>should add an item to shopping cart</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>The selector "body > div:nth-child(5) > main:nth-child(3) > div:nth-child(4) > div:nth-child(1) > div:nth-child(5) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > ol:nth-child(1) > li:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)]" used with strategy "css selector" is invalid! For more information on selectors visit the WebdriverIO docs at: https://webdriver.io/docs/selectors</message>
+                <stack-trace>invalid selector: The selector "body > div:nth-child(5) > main:nth-child(3) > div:nth-child(4) > div:nth-child(1) > div:nth-child(5) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > ol:nth-child(1) > li:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)]" used with strategy "css selector" is invalid! For more information on selectors visit the WebdriverIO docs at: https://webdriver.io/docs/selectors
+                    at getErrorFromResponseBody (C:\Users\colle\Desktop\colleen-brown-assignment4\node_modules\webdriver\build\utils.js:198:12)
+                    at NodeJSRequest._request (C:\Users\colle\Desktop\colleen-brown-assignment4\node_modules\webdriver\build\request\index.js:166:60)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async Browser.wrapCommandFn (C:\Users\colle\Desktop\colleen-brown-assignment4\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Browser.$ (C:\Users\colle\Desktop\colleen-brown-assignment4\node_modules\webdriverio\build\commands\browser\$.js:91:17)
+                    at async Browser.wrapCommandFn (C:\Users\colle\Desktop\colleen-brown-assignment4\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async getFirstElement (C:\Users\colle\Desktop\colleen-brown-assignment4\node_modules\expect-webdriverio\lib\utils.js:178:16)
+                    at async Object.toBeClickableFn (C:\Users\colle\Desktop\colleen-brown-assignment4\node_modules\expect-webdriverio\lib\matchers\element\toBeClickable.js:8:16)
+                    at async Context.&lt;anonymous> (C:\Users\colle\Desktop\colleen-brown-assignment4\test\specs\Assignment.js:29:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

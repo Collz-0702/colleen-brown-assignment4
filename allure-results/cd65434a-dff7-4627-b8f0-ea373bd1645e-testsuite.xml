@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1668706278629' stop='1668706292559'>
+    <name>Add to Shopping Cart</name>
+    <title>Add to Shopping Cart</title>
+    <test-cases>
+        <test-case start='1668706278630' status='failed' stop='1668706292557'>
+            <name>should add an item to shopping cart</name>
+            <title>should add an item to shopping cart</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Expect $(`div[class="swatch-opt-1556"] div[class= "swatch-attribute size"]`) to be selected
+                
+                Expected: "selected"
+                Received: "not selected"</message>
+                <stack-trace>Error: Expect $(`div[class="swatch-opt-1556"] div[class= "swatch-attribute size"]`) to be selected
+                
+                Expected: "selected"
+                Received: "not selected"
+                    at Context.&lt;anonymous> (C:\Users\colle\Desktop\colleen-brown-assignment4\test\specs\Assignment.js:30:44)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
