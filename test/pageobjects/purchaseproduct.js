@@ -1,14 +1,14 @@
-const Page = require('./page');
+
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class PurchaseProducts extends Page {
+class PurchaseProducts {
     /**
      * define selectors using getter methods
      */
     get btncartinfo() {
-        return $('.action.showcart.active');
+        return $('.action.showcart');
     }
     get btncheckout() {
         return $('#top-cart-btn-checkout');
@@ -44,12 +44,10 @@ class PurchaseProducts extends Page {
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async orderitem(btncartinfo, btncheckout, firstname, lastname, checkbox, streetname, city, zipcode, country, phonenumber, btnshiprate, btnnext) {
-        await this.btncartinfo.click();
-        await this.btncheckout.click();
+    async orderitem(email, firstname, lastname, streetname, city, zipcode, country, phonenumber) {
+        await this.email.setValue(email);
         await this.inputfirstname.setValue(firstname);
         await this.inputlastname.setValue(lastname);
-        await this.checkbox.click();
         await this.inputstreetname.setValue(streetname);
         await this.inputcity.setValue(city);
         await this.zipcode.setValue(zipcode);

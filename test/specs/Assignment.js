@@ -2,6 +2,7 @@ const SignupPage = require('../pageobjects/signup.page');
 const SecurePage = require('../pageobjects/secure.page');
 const Addtocart = require('../pageobjects/cart.page');
 const PurchaseProducts = require('../pageobjects/purchaseproduct');
+const { default: $ } = require('webdriverio/build/commands/browser/$');
 
 
 
@@ -23,23 +24,29 @@ describe('My SignUp application', () => {
 
 
 describe('Add to Shopping Cart', () => {
-    it.only('should add an item to shopping cart', async () => {
+    it.only('should add a Purple Radiant Tee item to shopping cart', async () => {
         await browser.url('https://magento.softwaretestingboard.com/');
         //await Addtocart.open();
-        await $('img[alt="Radiant Tee"]').click();
-        //     await expect(Addtocart.btnaddsize).toBeClickable();
-        //     await expect(Addtocart.btnaddsize).toHaveAttr('size');
-        //     await expect(Addtocart.btnaddcolor).toBeSelected();
+        //await $('img[alt="Radiant Tee"]').click();
+        await $('.page-wrapper').waitForDisplayed();
+        await expect(Addtocart.btnaddsize).click();
+        await expect(Addtocart.btnaddcolor).click();
         //     await expect(Addtocart.btnaddcolor).toHaveAttr('color');
-        //     await expect(Addtocart.btnaddcart).toBeClickable();
-        //     await expect(AddtoCart.addcartnote).toHaveTextContaining(
-        //         'Added to Cart');
+        await expect(Addtocart.btnaddcart).click();
+        await expect(AddtoCart.addcartnote).toHaveTextContaining(
+            'Added to Cart');
     });
 });
 describe('My Purchased Item', () => {
     it.skip('should allow items in cart to be purchased', async () => {
         await PurchaseProducts.open();
-        await PurchaseProducts.orderitem('Colleen', 'Brown', "Ensom City", 'Spanish Town', '00000', 'Jamaica', '8764455544');
+        await browser.url('https://magento.softwaretestingboard.com/');
+        const cartbtn = PurchaseProducts.btncartinfo;
+        await cartbtn.click();
+        await expect(cartbtn).toBeGreaterThanOrEqual(1);
+        await $('#top-cart-btn-checkout').click();
+        await browser.url('https://magento.softwaretestingboard.com/checkout/#shipping');
+        await PurchaseProducts.orderitem("colleen+1@gmail.com", 'Colleen', 'Brown', "Ensom City", 'Spanish Town', '00000', 'Jamaica', '8764455544');
 
     });
 });

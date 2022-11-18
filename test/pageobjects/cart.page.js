@@ -11,30 +11,19 @@ class Addtocart {
         return $('img[alt="Radiant Tee"]')
     }
     get btnaddsize() {
-        return $('div[class="swatch-opt-1556"] div[class= "swatch-attribute size"]');
+        return $('#option-label-size-143-item-167');
     }
 
     get btnaddcolor() {
-        return $('div[class="swatch-opt-1556"] div[class="swatch-attribute color"]');
+        return $('#option-label-color-93-item-57');
     }
     get btnaddcart() {
-        return $('button[title= "Add to Cart"]');
+        return $('button[id="product-addtocart-button"] span');
     }
 
     get addcartnote() {
-        return $('button[title= "Add to Cart"]');
+        return $('div[data-bind= "html: $parent.prepareMessageForHtml(message.text)"]');
     }
 
-    async addacart() {
-        await this.itemimage.click();
-        await this.btnaddsize.click();
-        await this.btnaddsize.isSelected();
-        await this.btnaddcolor.click();
-        await this.btnaddcolor.isSelected();
-        await this.btnaddcart.click();
-    }
-    open() {
-        return browser.url(`https://magento.softwaretestingboard.com/`);
-    }
 }
 module.exports = new Addtocart();
