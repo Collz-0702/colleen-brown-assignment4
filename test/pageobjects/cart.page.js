@@ -3,7 +3,7 @@
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class Addtocart {
+class addToCart {
     /**
      * define selectors using getter methods
      */
@@ -24,6 +24,11 @@ class Addtocart {
     get addcartnote() {
         return $('div[data-bind= "html: $parent.prepareMessageForHtml(message.text)"]');
     }
-
+    async addItemToCart() {
+        await this.itemimage.click();
+        await this.btnaddsize.click();
+        await this.btnaddcolor.click();
+        await this.btnaddcart.click();
+    }
 }
-module.exports = new Addtocart();
+module.exports = new addToCart();

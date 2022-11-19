@@ -61,4 +61,5 @@ class SignupPage extends Page {
         return super.open('signup');
     }
 }
+
 module.exports = new SignupPage();
