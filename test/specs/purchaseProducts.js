@@ -4,7 +4,7 @@ const addToCart = require('../pageobjects/cart.page');
 const { faker } = require('@faker-js/faker');
 
 
-describe.only('My Purchased Item', () => {
+describe.skip('My Purchased Item', () => {
     it('should allow items in cart to be purchased', async () => {
         await browser.url('https://magento.softwaretestingboard.com/');
         await addToCart.addItemToCart();

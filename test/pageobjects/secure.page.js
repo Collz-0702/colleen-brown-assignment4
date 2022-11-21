@@ -10,7 +10,7 @@ class SecurePage extends Page {
      * define selectors using getter methods
      */
     get welcomenote() {
-        return $('div[class= "panel header"] span[class="logged-in"]');
+        return $('.message-success.success.message');
     }
 }
 
