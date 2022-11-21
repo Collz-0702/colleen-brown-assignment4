@@ -1,3 +1,4 @@
+const { default: $ } = require("webdriverio/build/commands/browser/$");
 
 
 
@@ -57,6 +58,12 @@ class purchaseProducts {
     }
     get sucesspage() {
         return $('h1.page-title>span')
+    }
+    get hiddenItemList() {
+        return $('.counter-label span')
+    }
+    get shoppingCartInfo() {
+        return $('div[data-bind=html: $parent.prepareMessageForHtml(message.text)] a')
     }
     /**
      * a method to encapsule automation code to interact with the page
