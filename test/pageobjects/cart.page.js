@@ -7,28 +7,28 @@ class addToCart {
     /**
      * define selectors using getter methods
      */
-    get itemimage() {
+    get itemImage() {
         return $('img[alt="Radiant Tee"]')
     }
-    get btnaddsize() {
+    get btnAddSize() {
         return $('#option-label-size-143-item-167');
     }
 
-    get btnaddcolor() {
+    get btnAddColor() {
         return $('#option-label-color-93-item-57');
     }
-    get btnaddcart() {
+    get btnAddCart() {
         return $('button[id="product-addtocart-button"] span');
     }
 
-    get addcartnote() {
+    get addCartNote() {
         return $('div[data-bind= "html: $parent.prepareMessageForHtml(message.text)"]');
     }
     async addItemToCart() {
-        await this.itemimage.click();
-        await this.btnaddsize.click();
-        await this.btnaddcolor.click();
-        await this.btnaddcart.click();
+        await this.itemImage.click();
+        await this.btnAddSize.click();
+        await this.btnAddColor.click();
+        await this.btnAddCart.click();
     }
 }
 module.exports = new addToCart();

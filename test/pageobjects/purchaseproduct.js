@@ -1,4 +1,4 @@
-const { default: $ } = require("webdriverio/build/commands/browser/$");
+
 
 
 
@@ -11,28 +11,28 @@ class purchaseProducts {
     /**
      * define selectors using getter methods
      */
-    get btncartinfo() {
+    get btnCartInfo() {
         return $('.action.showcart');
     }
-    get btncheckout() {
+    get btnCheckOut() {
         return $('#top-cart-btn-checkout');
     }
     get email() {
         return $('#customer-email');
     }
-    get firstname() {
+    get firstName() {
         return $('[name="firstname"]');
     }
-    get lastname() {
+    get lastName() {
         return $('[name="lastname"]');
     }
-    get streetname() {
+    get streetName() {
         return $('[name="street[0]"]');
     }
     get city() {
         return $('[name="city"]');
     }
-    get zipcode() {
+    get zipCode() {
         return $('[name="postcode"]');
     }
     get country() {
@@ -41,22 +41,22 @@ class purchaseProducts {
     get state() {
         return $('[name="region_id"]')
     }
-    get phonenumber() {
+    get phoneNumber() {
         return $('[name="telephone"]');
     }
-    get btnshiprate() {
+    get btnShipRate() {
         return $('[name="ko_unique_4"]');
     }
-    get btnnext() {
+    get btnNext() {
         return $('.button.action.continue.primary');
     }
     get counterNumber() {
         return $('.counter-number');
     }
-    get placeorder() {
+    get placeOrder() {
         return $('[title="Place Order"]>span')
     }
-    get sucesspage() {
+    get sucessPage() {
         return $('h1.page-title>span')
     }
     get hiddenItemList() {
@@ -69,22 +69,22 @@ class purchaseProducts {
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async orderitem(email, firstname, lastname, streetname, city, state, zipcode, country, phonenumber) {
+    async orderItem(email, firstName, lastName, streetName, city, state, zipCode, country, phoneNumber) {
         await this.email.setValue(email);
-        await this.firstname.setValue(firstname);
-        await this.phonenumber.scrollIntoView();
-        await this.lastname.setValue(lastname);
-        await this.streetname.setValue(streetname);
+        await this.firstName.setValue(firstName);
+        await this.phoneNumber.scrollIntoView();
+        await this.lastName.setValue(lastName);
+        await this.streetName.setValue(streetName);
         await this.city.setValue(city);
         await this.state.selectByAttribute("data-title", state);
-        await this.zipcode.setValue(zipcode);
+        await this.zipCode.setValue(zipCode);
         await this.country.selectByAttribute("data-title", country);
-        await this.phonenumber.scrollIntoView();
-        await this.phonenumber.setValue(phonenumber);
-        await this.btnnext.scrollIntoView();
-        await this.btnshiprate.waitForDisplayed();
-        await this.btnshiprate.click();
-        await this.btnnext.click();
+        await this.phoneNumber.scrollIntoView();
+        await this.phoneNumber.setValue(phoneNumber);
+        await this.btnNext.scrollIntoView();
+        await this.btnShipRate.waitForDisplayed();
+        await this.btnShipRate.click();
+        await this.btnNext.click();
 
     }
 
@@ -92,7 +92,7 @@ class purchaseProducts {
      * overwrite specific options to adapt it to page object
      */
     open() {
-        return super.open('orderitem');
+        return super.open('orderItem');
     }
 }
 
