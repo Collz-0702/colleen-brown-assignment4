@@ -1,7 +1,6 @@
 const signUpPage = require('../pageobjects/signup.page');
 const securePage = require('../pageobjects/secure.page');
 const { faker } = require('@faker-js/faker');
-const { default: debug } = require('webdriverio/build/commands/browser/debug');
 
 
 

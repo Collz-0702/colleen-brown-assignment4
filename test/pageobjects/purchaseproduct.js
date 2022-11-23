@@ -1,9 +1,5 @@
 
 
-
-
-
-
 /**
  * sub page containing specific selectors and methods for a specific page
  */
@@ -17,9 +13,9 @@ class purchaseProducts {
     get btnCheckOut() {
         return $('#top-cart-btn-checkout');
     }
-    get email() {
-        return $('#customer-email');
-    }
+    // get email() {
+    // return $('#customer-email');
+    // }
     get firstName() {
         return $('[name="firstname"]');
     }
@@ -65,14 +61,13 @@ class purchaseProducts {
     get shoppingCartInfo() {
         return $('div[data-bind=html: $parent.prepareMessageForHtml(message.text)] a')
     }
+
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async orderItem(email, firstName, lastName, streetName, city, state, zipCode, country, phoneNumber) {
-        await this.email.setValue(email);
+    async orderItem(firstName, lastName, streetName, city, state, zipCode, country, phoneNumber) {
         await this.firstName.setValue(firstName);
-        await this.phoneNumber.scrollIntoView();
         await this.lastName.setValue(lastName);
         await this.streetName.setValue(streetName);
         await this.city.setValue(city);

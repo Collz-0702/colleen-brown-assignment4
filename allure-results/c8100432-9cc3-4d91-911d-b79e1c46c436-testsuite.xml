@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1669177134718' stop='1669177172550'>
+    <name>My Purchased Item</name>
+    <title>My Purchased Item</title>
+    <test-cases>
+        <test-case start='1669177134719' status='passed' stop='1669177172546'>
+            <name>should allow items in cart to be purchased</name>
+            <title>should allow items in cart to be purchased</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

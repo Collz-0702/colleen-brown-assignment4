@@ -1,4 +1,5 @@
 
+
 const Page = require('./page');
 
 /**
@@ -40,7 +41,9 @@ class signUpPage extends Page {
     get errorMsg() {
         return $('#password-error');
     }
-
+    get emailError() {
+        return $('div[data-bind= "html: $parent.prepareMessageForHtml(message.text)"]')
+    }
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password

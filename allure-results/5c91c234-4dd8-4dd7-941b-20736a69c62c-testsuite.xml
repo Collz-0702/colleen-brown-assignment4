@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1669177134855' stop='1669177172429'>
+    <name>My verified Purchase</name>
+    <title>My verified Purchase</title>
+    <test-cases>
+        <test-case start='1669177134856' status='broken' stop='1669177172428'>
+            <name>should show a verified purchase</name>
+            <title>should show a verified purchase</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>this.orderNumber.getValue is not a function</message>
+                <stack-trace>TypeError: this.orderNumber.getValue is not a function
+                    at verifyPurchase.verify (C:\Users\colle\Desktop\colleen-brown-assignment4\test\pageobjects\verifyPurchase.js:11:32)
+                    at Context.&lt;anonymous> (C:\Users\colle\Desktop\colleen-brown-assignment4\test\specs\verifiedPurchase.js:28:30)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
